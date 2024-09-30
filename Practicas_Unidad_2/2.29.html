@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2.29</title>
+</head>
+
+<body>
+    <!--Hacer una página JavaScript que contenga una función primo que recibe
+un número como parámetro y devuelve los siguientes resultados:
+- Si el número es primo muestra por pantalla "El número es primo"
+- Si el número no es primo muestra por pantalla "El número no es primo"-->
+    <script>
+        function primo(numero) {
+            if (numero % 2 == 0) {
+                alert("El número es primo");
+            }
+            else {
+                alert("El número no es primo");
+            }
+        }
+        let numero = parseInt(prompt("Ingrese un número: "));
+        primo(numero);
+    </script>
+
+</body>
+
+</html>

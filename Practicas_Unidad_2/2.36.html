@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ç, initial-scale=1.0">
+    <title>Ejercicio 2.36</title>
+</head>
+
+<body>
+    <script>
+        function mostrarVocales() {
+            let letras = "";
+            let vocales = "";
+            let contador = 0;
+            do {
+                letras = prompt("Ingrese una letra, para terminar escriba '*': ");
+                if (letras == "a" || letras == "e" || letras == "i" || letras == "o" || letras == "u") {
+                    vocales += letras;
+                    contador++;
+                }
+            } while (letras != "*");
+            alert("Has introducido " + contador + " vocales" + "\n" + vocales);
+        }
+        mostrarVocales();
+    </script>
+
+</body>
+
+</html>

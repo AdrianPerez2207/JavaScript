@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2.31</title>
+</head>
+
+<body>
+    <script>
+        function cuadrado(caracter, numero) {
+            let cuadrado = "";
+            for (let i = 0; i < numero; i++) {
+                for (let j = 0; j < numero; j++) {
+                    cuadrado += caracter;
+                }
+                cuadrado += "\n";
+            }
+            alert(cuadrado);
+        }
+        let caracter = prompt("Ingrese un carácter: ");
+        let numero = parseInt(prompt("Ingrese un número: "));
+        cuadrado(caracter, numero);
+    </script>
+
+</body>
+
+</html>
