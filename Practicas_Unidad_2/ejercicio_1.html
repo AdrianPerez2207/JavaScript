@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <script>
+        function par(numero) {
+            let esPar = false;
+            if (numero % 2 == 0) {
+                esPar = true;
+            }
+            return esPar;
+        }
+        function generarTabla(fila, columna) {
+            let contador = 1;
+            document.write("<table>");
+            for (let i = 0; i < fila; i++) {
+                document.write("<tr>");
+                for (let j = 0; j < columna; j++) {
+                    if (par(contador)) {
+                        document.write("<td style='background-color:red'>" + contador + "</td>");
+                    } else {
+                        document.write("<td>" + contador + "</td>");
+                    }
+                    /*if (contador % 2 == 0) {
+                        document.write("<td style='background-color:red'>" + contador + "</td>");
+                    } else {
+                        document.write("<td>" + contador + "</td>");
+                    }*/
+                    contador++;
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        }
+
+        let columnas = parseInt(prompt("Ingrese el número de columnas"));
+        let filas = parseInt(prompt("Ingrese el número de filas"));
+
+        generarTabla(filas, columnas);
+
+    </script>
+
+</body>
+
+</html>
