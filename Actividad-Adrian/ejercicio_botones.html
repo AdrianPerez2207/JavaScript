@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones</title>
+</head>
+
+<body>
+    <h2 id="texto">Esto es un ejemplo de texto a ser modificado</h2>
+    <button onclick="subrayarTexto()">Subrayado</button>
+    <button onclick="fondoTexto()">Fondo</button>
+    <button onclick="colorTexto()">Texto</button>
+    <button onclick="tamañoTexto()">Tamaño</button>
+
+    <script>
+        /*Comprobamos que el texto no esté subrayado, si lo está se lo quitamos, si no lo ponemos.*/
+        function subrayarTexto() {
+            if (document.getElementById("texto").style.textDecoration == "underline") {
+                document.getElementById("texto").style.textDecoration = "none";
+            } else {
+                document.getElementById("texto").style.textDecoration = "underline";
+            }
+        }
+        /*Creamos una variable para el estado del color, comprobamos en qué estado está y cambiamos el color.*/
+        let estadoColor = 0;
+        function fondoTexto() {
+            if (estadoColor == 0) {
+                document.getElementById("texto").style.backgroundColor = "#ff5733";
+                estadoColor = 1;
+            } else if (estadoColor == 1) {
+                document.getElementById("texto").style.backgroundColor = "#00c5fa";
+                estadoColor = 2;
+            } else if (estadoColor == 2) {
+                document.getElementById("texto").style.backgroundColor = "#effa00";
+                estadoColor = 3;
+            } else {
+                document.getElementById("texto").style.backgroundColor = "#fcfcf7";
+                estadoColor = 0;
+            }
+        }
+        /*Hacemos lo mismo que antes pero con el color del texto.*/
+        function colorTexto() {
+            if (estadoColor == 0) {
+                document.getElementById("texto").style.color = "#ff5733";
+                estadoColor = 1;
+            } else if (estadoColor == 1) {
+                document.getElementById("texto").style.color = "#00c5fa";
+                estadoColor = 2;
+            } else if (estadoColor == 2) {
+                document.getElementById("texto").style.color = "#effa00";
+                estadoColor = 3;
+            } else {
+                document.getElementById("texto").style.color = "#000000";
+                estadoColor = 0;
+            }
+        }
+        /*Cogemos la misma lógica de los dos anteriores pero con el tamaño del texto.*/
+        let tamaño = 0;
+        function tamañoTexto() {
+            if (tamaño == 0) {
+                document.getElementById("texto").style.fontSize = "large";
+                tamaño = 1;
+            } else if (tamaño == 1) {
+                document.getElementById("texto").style.fontSize = "x-large";
+                tamaño = 2;
+            } else if (tamaño == 2) {
+                document.getElementById("texto").style.fontSize = "xx-large";
+                tamaño = 3;
+            } else {
+                document.getElementById("texto").style.fontSize = "medium";
+                tamaño = 0;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
