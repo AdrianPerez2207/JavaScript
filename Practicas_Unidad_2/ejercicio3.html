@@ -10,17 +10,27 @@
             color: green;
             font-size: 2em;
         }
+
+        .red {
+            color: red;
+            font-size: 18px;
+        }
     </style>
 </head>
 
 <body>
     <script>
         function mostrarNumeros() {
-            for (let i = 0; i < 10; i++) {
-                if (i % 2 == 0) {
-                    console.log("HOla");//document.write("<p class='green'>" + i + "</p>");
+            for (let i = 1; i <= 300; i++) {
+                if (i % 2 == 0) { //Verde y 2em
+                    document.write("<span class='green'>" + i + " " + "</span>");
+                } else if (i % 3 == 0) { //Rojo y 18px
+                    document.write("<span class='red'>" + i + " " + "</span>");
                 } else {
-                    console.log("Adios");//document.write("<p>" + i + "</p>");
+                    document.write(i + " ");
+                }
+                if (i % 10 == 0) {
+                    document.write("<br>");
                 }
             }
         }
