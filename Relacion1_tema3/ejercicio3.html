@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+    <script>
+        function mesDelAño(numeroMes) {
+            switch (numeroMes) {
+                case 0:
+                    return "Enero";
+                case 1:
+                    return "Febrero";
+                case 2:
+                    return "Marzo";
+                case 3:
+                    return "Abril";
+                case 4:
+                    return "Mayo";
+                case 5:
+                    return "Junio";
+                case 6:
+                    return "Julio";
+                case 7:
+                    return "Agosto";
+                case 8:
+                    return "Septiembre";
+                case 9:
+                    return "Octubre";
+                case 10:
+                    return "Noviembre";
+                case 11:
+                    return "Diciembre";
+            }
+        }
+
+        let mes = parseInt(prompt("Escribe un número entre el 0 y el 11"));
+        document.write(mesDelAño(mes));
+    </script>
+</body>
+
+</html>

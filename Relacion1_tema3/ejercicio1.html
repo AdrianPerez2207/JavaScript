@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <script>
+        function diaDeLaSemana(numeroDia) {
+            switch (numeroDia) {
+                case 1:
+                    return "Lunes";
+                case 2:
+                    return "Martes";
+                case 3:
+                    return "Miércoles";
+                case 4:
+                    return "Jueves";
+                case 5:
+                    return "Viernes";
+                case 6:
+                    return "Sábado";
+                case 0:
+                    return "Domingo";
+            }
+        }
+
+        let dia = parseInt(prompt("Escribe un número entre el 0 y el 6"));
+        document.write(diaDeLaSemana(dia));
+    </script>
+</body>
+
+</html>

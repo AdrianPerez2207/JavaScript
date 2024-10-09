@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+</head>
+
+<body>
+    <script>
+        function buscarString(texto, string) {
+            let posicion = texto.indexOf(string);
+            if (posicion === -1) {
+                document.write("No se encontró la cadena");
+            } else {
+                document.write("La cadena se encuentra en la posición: " + posicion);
+            }
+        }
+
+        let texto = prompt("Escribe el texto");
+        let string = prompt("Escribe la cadena");
+        buscarString(texto, string);
+    </script>
+</body>
+
+</html>
