@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio_ventanas</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="">Ingrese su nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        <label for="">¿Desea cambiar el color de fondo de tu ventana?</label>
+        <input type="color" id="color" name="color" onchange="cambiarColor()">
+        <input type="button" value="abrir ventana" onclick="abrirVentana()">
+    </form>
+    <script>
+        let ventana = "";
+        function abrirVentana() {
+            ventana = window.open("", "miVentana", "width=500,height=500");
+            ventana.document.write(`<h1> Hola ${document.getElementById("nombre").value} </h1>`);
+            ventana.document.write(
+                `<input type="color" id="color1" name="color1" onchange="document.bgColor = document.getElementById('color1').value">`);
+            ventana.document.bgColor = document.getElementById("color").value;
+
+        }
+        function cambiarColor() {
+            document.bgColor = document.getElementById("color").value;
+        }
+    </script>
+</body>
+
+</html>
