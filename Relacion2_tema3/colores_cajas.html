@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border-radius: 25% 0%;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function cambiarColor(elemento) {
+            document.bgColor = elemento.id;
+            elemento.style.backgroundColor = "white";
+        }
+        function restaurarColor(elemento) {
+            document.bgColor = "white";
+            elemento.style.backgroundColor = elemento.id;
+        }
+    </script>
+
+    <h1 style="text-align: center;">Cambiar el color de los div utilizando el objeto THIS</h1>
+    <section>
+        <div id="red" style="background-color: red;" onmouseover="cambiarColor(this)" onmouseout="restaurarColor(this)">
+        </div>
+        <div id="yellow" style="background-color: yellow;" onmouseover="cambiarColor(this)"
+            onmouseout="restaurarColor(this)"></div>
+        <div id=" blue" style="background-color: blue;" onmouseover="cambiarColor(this)"
+            onmouseout="restaurarColor(this)"></div>
+        <div id=" green" style="background-color: green;" onmouseover="cambiarColor(this)"
+            onmouseout="restaurarColor(this)"></div>
+    </section>
+
+</body>
+
+</html>
