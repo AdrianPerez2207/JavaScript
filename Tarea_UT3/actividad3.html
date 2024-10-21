@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3</title>
+</head>
+
+<body>
+    <script>
+        /*Realiza un programa que pregunte una letra de la A a la Z. Tras ello el programa indicará cuántos
+        DNIs de 3 cifras (del 001 al 999) tienen esa letra y tras ello te mostrará “de golpe” el listado de
+        todos los DNIs que tienen esa letra.*/
+        function calcularNumero(letra) {
+            for (let i = 0; i < letras.length; i++) {
+                if (letras[i] == letra) {
+                    return numero[i] * 23;
+                }
+            }
+            return 0;
+        }
+        let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
+        let letras = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"];
+        let letra = prompt("Ingrese una letra de la A a la Z");
+        let numerosConLetra = [];
+        let contador = 0;
+        let numero = calcularNumero(letra);
+
+        for (let i = 1; i < 999; i++) {
+            if (numero && (i % 23) === numero / 23) {
+                numerosConLetra.push(i);
+                contador++;
+            }
+        }
+        document.write("El numero de " + letra + " es: " + contador);
+        document.write("<br>");
+        document.write("Los numeros de " + letra + " son: " + numerosConLetra);
+
+    </script>
+
+</body>
+
+</html>

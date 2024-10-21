@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4</title>
+</head>
+
+<body>
+    <script>
+        /*Pasamos el número a String, le damos la vuelta y comprobamos que son iguales,si son iguales, devuelve true.*/
+        function esCapicua(numero) {
+            let numeroString = String(numero);
+            let numeroInvertido = numeroString.split("").reverse().join("");
+            if (numeroString == numeroInvertido) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        let contador = 0;
+        let numeros = [];
+        /*Recorremos todos los números, comprobamos si son primos y capicúas, si lo son, lo guardamos en un array y sumamos 1 al contador.*/
+        for (let i = 0; i < 100; i++) {
+            if (i % 1 == 0 && i % i == 0 && esCapicua(i)) {
+                numeros.push(i);
+                contador++;
+            }
+        }
+        document.write("El numero de capicuas es: " + contador);
+        document.write("<br>");
+        document.write("Los numeros de capicuas son: " + numeros);
+    </script>
+</body>
+
+</html>

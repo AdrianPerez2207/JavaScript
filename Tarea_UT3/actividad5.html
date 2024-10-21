@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 5</title>
+</head>
+
+<body>
+    <script>
+        let cadena = prompt("Ingresa una cadena con el siguiente formato: nombre:apellidos:telefono:email:codigopostal");
+        let cadenaSplit = cadena.split(":");
+        document.write("Nombre: " + cadenaSplit[0]);
+        document.write("<br>");
+        document.write("Apellidos: " + cadenaSplit[1]);
+        document.write("<br>");
+        document.write("Telefono: " + cadenaSplit[2]);
+        document.write("<br>");
+        document.write("Email: " + cadenaSplit[3]);
+        document.write("<br>");
+        document.write("Codigo Postal: " + cadenaSplit[4]);
+    </script>
+</body>
+
+</html>

@@ -9,20 +9,28 @@
 
 <body>
     <script>
-        function calcularLetra() {
-            let dni = parseInt(prompt("Ingrese su DNI sin letra"));
+        function calcularLetra(dni) {
             let resultado = dni % 23;
             let letra = letras[resultado];
-
-            sumaLetras = sumaLetras + calcularLetra(dni);
+            sumaLetras = sumaLetras + letra;
         }
 
         let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
         let letras = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"];
         let sumaLetras = " ";
-        
-        setInterval("calcularLetra()", 20000)
-        document.write("Las letras introducidas son: " + sumaLetras);
+        let dni = "";
+
+        /*Pedimos el dni por teclado, comprobamos si el dni no es -1, si es diferente a -1 calculamos la letra y la sumamos a sumaLetras,
+        pintamos las letras generadas y paramos el setInterval para que no se repita el proceso*/
+        let intervalo = setInterval(() => {
+            dni = parseInt(prompt("Ingrese su DNI sin letra"));
+            if (dni != -1) {
+                calcularLetra(dni);
+            } else {
+                document.write("Las letras introducidas son: " + sumaLetras);
+                clearInterval(intervalo);
+            }
+        }, 2000);
     </script>
 </body>
 
